@@ -40,4 +40,5 @@
     font-size: 36px;
     margin-right: 50px;
     color: #111;
+    transition: 0.5s;
 }

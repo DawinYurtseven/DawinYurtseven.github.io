@@ -32,11 +32,11 @@
     display: none;
 }
 
-.fullBody h1 {
-    font-family:"Arial";
+ h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #555;
 }
 
-.fullBody{
+body {
     background-color: #f2f2f2;
 }

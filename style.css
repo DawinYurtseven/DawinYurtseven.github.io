@@ -27,13 +27,15 @@
     color: #717171;
     display: block;
     transition: 0.3s;
+    margin-bottom: 3px;
 }
 
-.innerMenu li:hover {
+.innerMenu a:hover{
+    font-size: 16px;
     color: #f1f1f1;
 }
 
-.Menu a {
+.Menu > a {
     position: absolute;
     top: 0;
     right: 25px;

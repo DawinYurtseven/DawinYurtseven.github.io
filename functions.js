@@ -4,6 +4,7 @@ function toggleMenu() {
         document.getElementById("collapseMenu").style.width = "0px";
         document.getElementById("MenuButton").style.right = "10px";
         document.body.style.backgroundColor = "white";
+        
     }
     else {
         document.getElementById("collapseMenu").style.width = "350px";

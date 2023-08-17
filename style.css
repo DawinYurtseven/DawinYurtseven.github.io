@@ -40,6 +40,11 @@
     display: block;
 }
 
+a:link, a:visited{
+    color: white;
+    text-align: center;
+}
+
 .innerMenu a:hover{
     color: #f1f1f1;
 }

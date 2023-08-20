@@ -13,7 +13,7 @@
 
     <nav id="Menu">
         <div class="Menu">
-            <a id="MenuButton" class="closebtn" onclick="toggleMenu()"> &#9776; </a>
+            <a id="MenuButton" class="menuButton" onclick="toggleMenu()"> &#9776; </a>
             <div class="innerMenu" id="collapseMenu">
                 <ul>
                     <li>
@@ -47,15 +47,56 @@
         </a>
     </nav>
 
-    <div id="Main">
-        <header>
-            <p>
-                eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeehh.
-            </p>
+    <div id="wrapper">
+        <!--Header-->
+        <header id="header">
+            <div class="inner">
+                <p>
+                    <a href="index.html"> DawinYurtseven / </a>
+                </p>
+            </div>
         </header>
+
+        <div id="Main">
+            <div class="inner">
+                <!--Title-->
+                <header>
+                    <h1>
+                        Hey there!
+                        <br>
+                        I'm <a href="HTML/about.html">Dawin Yurtseven</a>, an aspiring game developer and student.
+                    </h1>
+                </header>
+                <p>
+                    here are the games I've worked on:
+                </p>
+                <!--Games I made-->
+                <section class="tiles">
+                    <article class="container">
+                        <span class="Image">
+                            <img src="Images/Logo/Legend of Lonk.png" alt="Snow" style="width: 50%;">
+                        </span>
+                        <a href="https://collab.dvb.bayern/pages/viewpage.action?pageId=77832954">The Legend of Lonk</a>
+                    </article>
+                    <article class="container">
+                        <span class="Image">
+                            <img src="Images/Logo/DunguonShifters.png" alt="Snow" style="width: 50%;">
+                        </span>
+                        <a href="https://xientra.itch.io/dungeonshifters">Dunguon Shifters</a>
+                    </article>
+                    <article class="container">
+                        <span class="Image">
+                            <img src="Images/Logo/vsaexb.png" alt="Snow" style="width: 50%;">
+                        </span>
+                        <a href="https://bl4n8.itch.io/parcourexe">Parcour.exe</a>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <div id="Newest"></div>
+        <footer id="footer"></footer>
     </div>
-    <div id="Newest"></div>
-    <footer id="footer"></footer>
+
 
 </body>
 

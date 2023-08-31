@@ -1,9 +1,11 @@
-.fullBody h1 {
+/*#region basics*/
+
+h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #555;
 }
 
-.fullBody {
+body {
     background-color: white;
     transition: 0.5s;
 }
@@ -11,6 +13,102 @@
 * {
     transition: 0.3s;
 }
+
+a:link,
+a:visited {
+    color: #555;
+    text-decoration: dotted;
+    text-decoration-color: #111;
+}
+
+.inner {
+    padding: 0 1.25em
+}
+
+#header {
+    color: #111;
+    padding-top: 64px;
+    padding-bottom: 2px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+/*#endregion*/
+
+/*#region input*/
+
+.inputbase {
+    width: 50%;
+    height: 600px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    overflow-y:scroll;
+}
+
+
+
+@media screen and (max-width:736px) {
+    
+    .inputbase{
+        width: 100%;
+        height: 700px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+}
+
+/*#endregion*/
+
+
+/*#region lists*/
+
+.dateList ul{
+    list-style: none;
+}
+
+.dateList ul li{
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.dateList ul li span{
+    border-radius: 50%;
+    border: 1px dashed black;
+    padding: 5px 10px;
+    margin-right:10px;
+    background: #fff;
+}
+
+.dateList ul li span::before{
+    content: '';
+    position:absolute;
+    border-left: 1px solid;
+    left: 14px;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+}
+
+.datalist ul li:last-child span:before{
+    content: none;
+}
+
+.dateList ul li:last-child{
+    padding-bottom: 0;
+}
+
+/*#endregion*/
+
+/*#region Menu*/
 
 .innerMenu {
     height: 100%;
@@ -48,17 +146,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a:link,
-a:visited {
-    color: #555;
-    text-decoration:dotted;
-    text-decoration-color: #111;
-}
 .innerMenu a:hover {
     color: #f1f1f1;
 }
 
-.Menu > a {
+.Menu>a {
     position: fixed;
     top: 10px;
     right: 25px;
@@ -71,39 +163,211 @@ a:visited {
     background-color: #fff;
     padding: 5px 10px 5px 10px;
     border-radius: 15%;
-    
-}
-
-.inner {
-    padding: 0 1.25em
-}
-
-#header {
-    color:#111;
-    padding-top: 64px;
-    padding-bottom: 2px;
-}
-
-p {
-    font-size: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-.tiles article:hover{
-    color: #FFF;
-}
-
-article > a{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
 
 }
 
-.container {
+/*#endregion */
+
+/*#region Tiles*/
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-    text-align: center;
-    color: white;
+    margin: -2.5em 0 0 -2.5em;
 }
+
+.tiles article{
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    position: relative;
+    width: calc(3333.33333% - 2.5em);
+    margin: 2.5em 0 0 2.5em;
+}
+
+.tiles article > .image {
+    transition: 0.8s ease;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tiles article > .image img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.tiles article > .image::before{
+    pointer-events: none;
+    transition: background-color 0.8s ease, opacity 0.8s ease;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1.0;
+    z-index: 1;
+    opacity: 0.4;
+    background-color: #555;
+}
+
+.tiles article > .image::after{
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+    content: '';
+    display: block;
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.25;
+	z-index: 2;
+}
+
+.tiles article > a{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    transition: background-color 0.8s ease, transform 0.8s ease;
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 4px;
+    border-bottom: 0;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.tiles article > a > :last-child {
+    margin: 0;
+}
+
+.tiles article > a:hover {
+    color: #ffffff;
+}
+
+.tiles article > a h2 {
+    margin: 0;
+}
+
+.tiles article > a .content {
+    transition: max-height 0.8s ease, opacity 0.8s ease;
+    width: 100%;
+    max-height: 0;
+    line-height: 1.5;
+    margin-top: 0.35em;
+    opacity: 0;
+
+}
+
+.tiles article > a .content > :last-child{
+    margin-bottom: 0;
+}
+
+body:not(.is-touch) .tiles article:hover > .image {
+    transform: scale(1.1);
+}
+
+body:not(.is-touch) .tiles article:hover > .image::before{
+    background-color: #222;
+    opacity: 0.7;
+}
+
+body:not(.is-touch) .tiles article:hover > a  h2{
+    transition: 0.8s;
+    transform: scale(0.9);
+    text-decoration: underline;
+}
+
+body:not(.is-touch) .tiles article:hover > .image::after{
+    opacity: 0;
+}
+
+body:not(.is-touch) .tiles article:hover .content {
+    max-height: 15em;
+    opacity: 1;
+}
+
+body.is-preload .tiles article {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+body.is-touch .tiles article .content {
+    max-height: 15em;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+    .tiles {
+        margin: -1.25em 0 0 -1.25em;
+    }
+
+    .tiles article {
+        width: calc(33.33333% - 1.25em);
+        margin: 1.25em 0 0 1.25em;
+    }
+}
+
+* + .tiles {
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 980px) {
+    .tiles {
+        margin: -2.5em 0 0 -2.5em;
+    }
+
+    .tiles article {
+        width: calc(50% - 2.5em);
+        margin: 2.5em 0 0 2.5em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .tiles {
+        margin: -1.25em 0 0 -1.25em;
+    }
+
+    .tiles article {
+        width: calc(50% - 1.25em);
+        margin: 1.25em 0 0 1.25em;
+    }
+
+    .tiles article:hover>.image {
+        -moz-transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tiles {
+        margin: 0;
+    }
+
+    .tiles article {
+        width: 100%;
+        margin: 1.25em 0 0 0;
+    }
+}
+
+/*#endregion */

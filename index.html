@@ -6,10 +6,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="functions.js"></script>
+    
 </head>
 
-<body class="fullBody">
+<body>
 
     <nav id="Menu">
         <div class="Menu">
@@ -21,9 +23,6 @@
                     </li>
                     <li>
                         <a href="HTML/about.html"> About Me</a>
-                    </li>
-                    <li>
-                        <a href="HTML/developingGames.html"> Work In Progress</a>
                     </li>
                     <li>
                         <a href="HTML/thunderpunk.html">ThunderPunk</a>
@@ -38,7 +37,7 @@
                         <a href="HTML/gamejam.html"> Game Jams</a>
                     </li>
                     <li>
-                        <a href="HTML/others.html"> Unreleased Games</a>
+                        <a href="HTML/others.html"> Other projects</a>
                     </li>
                 </ul>
             </div>
@@ -68,33 +67,87 @@
                     </h1>
                 </header>
                 <p>
-                    here are the games I've worked on:
+                    here are the games I've worked on so far:
                 </p>
                 <!--Games I made-->
                 <section class="tiles">
-                    <article class="container">
-                        <span class="Image">
-                            <img src="Images/Logo/Legend of Lonk.png" alt="Snow" style="width: 50%;">
+
+                    <article>
+                        <span class="image">
+                            <img src="Images/Logo/Legend of Lonk.png" alt="Snow">
                         </span>
-                        <a href="https://collab.dvb.bayern/pages/viewpage.action?pageId=77832954">The Legend of Lonk</a>
+                        <a href="https://collab.dvb.bayern/pages/viewpage.action?pageId=77832954">
+                            <h2>The Legend of Lonk</h2>
+                            <div class="content">
+                                <p>
+                                    an old zelda like with the implementation of responsive audio
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <span class="image">
+                            <img src="Images/Logo/DunguonShifters.png" alt="Snow">
+                        </span>
+                        <a href="https://xientra.itch.io/dungeonshifters">
+                            <h2>Dunguon Shifters</h2>
+                            <div class="content">
+                                <p>
+                                    A Game Jam projekt where you have to move rooms of a dungeon to kill the heros
+                                </p>
+                            </div>
+                        </a>
                     </article>
                     <article class="container">
-                        <span class="Image">
-                            <img src="Images/Logo/DunguonShifters.png" alt="Snow" style="width: 50%;">
+                        <span class="image">
+                            <img src="Images/Logo/Parcour.png" alt="Snow">
                         </span>
-                        <a href="https://xientra.itch.io/dungeonshifters">Dunguon Shifters</a>
-                    </article>
-                    <article class="container">
-                        <span class="Image">
-                            <img src="Images/Logo/vsaexb.png" alt="Snow" style="width: 50%;">
-                        </span>
-                        <a href="https://bl4n8.itch.io/parcourexe">Parcour.exe</a>
+                        <a href="https://bl4n8.itch.io/parcourexe">
+                            <h2>
+                                Parcour.exe
+                            </h2>
+                            <div class="content">
+                                <p>
+                                An entry game to game development with simple jump & run mechanics
+                                </p>
+                            </div>
+                        </a>
                     </article>
                 </section>
             </div>
         </div>
-        <div id="Newest"></div>
-        <footer id="footer"></footer>
+        <div id="Newest">
+            <div class="inner">
+                <!--header-->
+                <p>
+                    The newest Updates:
+                </p>
+
+                <!--list of newest updates-->
+                <div class="dateList">
+                    <ul id="HomeList">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Contact me!</h2>
+                    <ul class="icons">
+                        <li>
+                            <!--twitter-->
+                        </li>
+                        <li>
+                            <!--linkedIn-->
+                        </li>
+                        <li>
+                            <!--instagram-->
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
     </div>
 
 
